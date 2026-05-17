@@ -1,3 +1,8 @@
+#define HStack
+#define Wall
+#define CXX
+#include <iostream>
+using namespace std;
 #CXX = g++
 CPPFLAGS = -Wall -ggdb
 
@@ -10,10 +15,10 @@ $(MAIN).exe: $(OBJ)
 $%.o: $%.cpp
 
 #$(MAIN).o: $(MAIN).cpp
-#	$(CXX) $(CPPFLAGS) -c $(MAIN).cpp
+	$(CXX) $(CPPFLAGS) -c $(MAIN).cpp
 
 #HStack.o: HStack.cpp
-#	$(CXX) $(CPPFLAGS) -c HStack.cpp
+	$(CXX) $(CPPFLAGS) -c HStack.cpp
 
 $(OBJ):HStack.hpp
 
