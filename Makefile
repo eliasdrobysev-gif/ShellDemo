@@ -1,5 +1,12 @@
+#define MAIN
+#define HStack
+#define CXX
+#define OBJ
+#define CPPFLAGS
+#include <iostream>
+using namespace std;
 #CXX = g++
-CPPFLAGS = -Wall -ggdb
+CPPFLAGS = -Wall -ggdb;
 
 MAIN = test
 OBJ = $(MAIN).o HStack.o
@@ -9,11 +16,11 @@ $(MAIN).exe: $(OBJ)
 
 $%.o: $%.cpp
 
-#$(MAIN).o: $(MAIN).cpp
-#	$(CXX) $(CPPFLAGS) -c $(MAIN).cpp
+$(MAIN).o: $(MAIN).cpp
+	$(CXX) $(CPPFLAGS) -c $(MAIN).cpp
 
-#HStack.o: HStack.cpp
-#	$(CXX) $(CPPFLAGS) -c HStack.cpp
+HStack.o: HStack.cpp
+	$(CXX) $(CPPFLAGS) -c HStack.cpp
 
 $(OBJ):HStack.hpp
 
